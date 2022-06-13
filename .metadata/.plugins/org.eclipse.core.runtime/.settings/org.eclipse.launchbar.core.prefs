@@ -1,0 +1,16 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:14_InputInterrupt Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:15_TimerInterrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:16_SysTick_Interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10_ADC_Continuous_Conversion,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:17_ADC_Interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:18_uart_rx_interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:19_uart_rx_interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20_SPI_RxTx_Interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_gpio_addr_config Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3_gpio_output
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10_ADC_Continuous_Conversion/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10_ADC_Continuous_Conversion/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:14_InputInterrupt\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:17_ADC_Interrupt/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:19_uart_rx_interrupt/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1_gpio_addr_config\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1_gpio_addr_config\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20_SPI_RxTx_Interrupt/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5_gpio_input/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:6_uart_tx2_USART6/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9_uart_rx/activeLaunchMode=run

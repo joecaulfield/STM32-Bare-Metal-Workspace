@@ -1,0 +1,61 @@
+/* REFACTOR OF PROJECT 6 FOR USART6, AND USING UART TO USB CONVERTER!
+ * Port C - PC6 RX / PC7 TX / PC8 [AF8]
+ */
+
+#include "stm32f7xx.h"
+#include <stdio.h>
+#include "uart.h"
+#include "led.h"
+#include "spi.h"
+
+/* Buffer for Transmit Data */
+uint8_t tx_buff[] = "Hello from SPI";
+
+/* Need to compute the size of TX Buffer */
+uint8_t tx_size = sizeof(tx_buff);
+
+/* Index to track the TX Buffer */
+volatile uint8_t tx_idx = 0;
+
+/* RX Buffer.  Must be same size as TX Buffer */
+uint_8_t rx_buff[sizeof(tx_buff)];
+
+/* Index to track the RX Buffer */
+volatile uint8_t rx_idx = 0;
+
+int main (void)
+{
+	/* Configure Master */
+	spi1_config();
+
+	/* Configure Slave */
+	spi3_config();
+
+	/* Enable Master (TX) */
+	spi1_activate();
+
+	/* Enable Slave (RX) */
+	spi3_activate();
+
+	while (1)
+	{
+
+	}
+}
+
+void SPI1_IRQHandler(void)
+{
+
+}
+
+void SPI3_IRQHandler(void)
+{
+
+}
+
+
+
+
+
+
+

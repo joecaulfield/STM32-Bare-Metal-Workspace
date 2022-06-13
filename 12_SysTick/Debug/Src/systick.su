@@ -1,0 +1,2 @@
+../Src/systick.c:13:6:systickDelayMs	24	static
+../Src/systick.c:34:6:systick_1Hz_interrupt	4	static

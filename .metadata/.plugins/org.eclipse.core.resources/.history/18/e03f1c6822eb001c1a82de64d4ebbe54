@@ -1,0 +1,66 @@
+#include "spi.h"
+
+#define GPIO_A_EN	(1U<<0)
+
+void spi1_config(void)
+{
+	/* Enable the Peripheral Clock of GPIOA */
+	RCC->AHB1EN	|= GPIO_A_EN;
+
+	/* Configure SPI SCK Pin PA5 */
+	// Alternate Function Mode = '10'
+	GPIOA->MODER &=~ (1U<<10);
+	GPIOA->MODER |= (1U<<11);
+
+	/* Select Alternate Function Mode as AF5 */
+	// AF5 = '0101' on Pins 23, 22, 21, 20 of AFRL
+	GPIOA->AFR[0] |= (1U<<20);
+	GPIOA->AFR[0] &=~ (1U<<21);
+	GPIOA->AFR[0] |= (1U<<22);
+	GPIOA->AFR[0] &=~ (1U<<23);
+
+	/* Set Pin Speed to 'Very High' */
+	GPIOA->OSPEEDR |= (1U<<10);
+	GPIOA->OSPEEDR |= (1U<<11);
+
+	/* Enable Internal Pull-Down Resistor on Pin 5 */
+	// Pull Down = '10' on Bit 11, 10
+	GPIOA->PUPDR &=~ (1U<<10);
+	GPIOA->PUPDR |= (1U<<11);
+
+	/* Configure SPI MOSI Pin PA7 */
+	GPIOA->MODER &=~ (1U<<14);
+	GPIOA->MODER |= (1U<<15);
+
+	/* Select Alternate Function Type as AF5 */
+	// AF5 = '0101' on Pins 31, 30, 29, 28
+	GPIOA->AFR[0] |= (1U<<28);
+	GPIOA->AFR[0] &=~ (1U<<29);
+	GPIOA->AFR[0] |= (1U<<30);
+	GPIOA->AFR[0] &=~ (1U<<31);
+
+	/* Set Pin Speed to Very High */
+	GPIOA->OSPEEDR |= (1U<<14);
+	GPIOA->OSPEEDR |= (1U<<15);
+
+	/* Enable Internal Pull Down on PA7 */
+	GPIOA->PUPDR &=~ (1U<<14);
+	GPIOA->PUPDR |= (1U<<15);
+
+	/* Enable SPI1 Interrupt in NVIC */
+	NVIC_EnableIRQ(SPI1_IRQn);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

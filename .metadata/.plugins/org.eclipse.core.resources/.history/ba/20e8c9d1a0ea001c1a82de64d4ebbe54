@@ -1,0 +1,36 @@
+#include "stm32f7xx.h"
+
+
+ // User LED on PI1
+ // User Push-Button on PI11
+
+#define GPIO_I_EN		(1U<<8)
+
+void pc13_exti_init(void)
+{
+	/* Enable clock access to Port I */
+	RCC->AHB1ENR |= GPIO_I_EN;
+
+	/* Set PI11 as Input */
+
+
+	/* Enable Clock Access to SYSCFG Module */
+
+
+	/* Clear port selection for EXTI11 */
+
+
+	/* Select Port 11 for EXTI11 */
+
+
+	/* Unmask EXTI11 */
+
+
+	/* Select Falling Edge Trigger */
+
+
+	/* Enable EXTI11 in NVIC */
+
+
+
+}

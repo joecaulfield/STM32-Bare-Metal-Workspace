@@ -1,0 +1,17 @@
+11:07:56 **** Incremental Build of configuration Debug for project 1_gpio_addr_config-struct ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_gpio_addr_config-struct.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\1_gpio_addr_config-struct\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_gpio_addr_config-struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_gpio_addr_config-struct.elf
+ 
+arm-none-eabi-size   1_gpio_addr_config-struct.elf 
+arm-none-eabi-objdump -h -S  1_gpio_addr_config-struct.elf  > "1_gpio_addr_config-struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    776	      8	   1568	   2352	    930	1_gpio_addr_config-struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_gpio_addr_config-struct.list
+ 
+
+11:07:57 Build Finished. 0 errors, 0 warnings. (took 825ms)
+

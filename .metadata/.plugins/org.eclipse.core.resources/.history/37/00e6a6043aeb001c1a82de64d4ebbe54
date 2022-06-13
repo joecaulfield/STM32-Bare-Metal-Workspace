@@ -1,0 +1,31 @@
+/* Simple Demonstration of SPI Configuration and Communication.
+ * This project is configured for the STM32 144-Nucleo Discovery Board. */
+
+#include "stm32f7xx.h"
+#include <stdio.h>
+#include "uart.h"
+#include "led.h"
+#include "spi.h"
+#include "i2c.h"
+
+
+int main (void)
+{
+
+	i2c2_slave_config();
+	i2c1_master_config();
+
+	while (1)
+	{
+
+	}
+}
+
+static void handle_i2c_master(void)
+{
+	/* Set Slave Address */
+	I2C1->CR2 |= SLAVE_OWN_ADDRESS;
+
+	/* Set 7-Bits Address Mode */
+	I2C1->CR2 &=~ (1U<<11);
+}

@@ -1,0 +1,5 @@
+../Src/main.c:31:5:main	8	static
+../Src/main.c:45:13:handle_i2c_master	4	static
+../Src/main.c:78:6:slave_reception_callback	4	static
+../Src/main.c:87:6:slave_complete_callback	8	static
+../Src/main.c:92:6:I2C2_EV_IRQHandler	8	static

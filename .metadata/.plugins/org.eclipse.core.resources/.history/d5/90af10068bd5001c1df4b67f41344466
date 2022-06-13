@@ -1,0 +1,19 @@
+/*
+ * No on-board user LED.  Let's try using header PA0
+ */
+
+// Define Peripheral Addressing
+#define PERIPH_BASE 		0x4000 0000UL
+
+// Define AHB1 Addressing
+#define AHB1_OFFSET			0x0002 0000UL
+#define AHB1PERIPH_BASE		PERIPH_BASE + AHB1_OFFSET
+
+// Define GPIOA Addressing
+#define GPIOA_OFFSET		0x0000 0000UL
+#define GPIOA_BASE			AHB1PERIPH_BASE + GPIOA_OFFSET
+
+// Enable clock access to Port A
+#define RCC_OFFSET			0x0000 0380UL
+#define RCC_BASE			AHB1PERIPH_BASE + RCC_OFFSET
+

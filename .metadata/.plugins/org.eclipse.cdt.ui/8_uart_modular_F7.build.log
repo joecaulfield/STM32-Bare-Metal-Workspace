@@ -1,0 +1,69 @@
+13:42:22 **** Incremental Build of configuration Debug for project 8_uart_modular_F7 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+In file included from ../Inc/gpio.h:11,
+                 from ../Src/gpio.c:1:
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:146:3: error: #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+  146 |  #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+      |   ^~~~~
+In file included from ../Src/gpio.c:1:
+../Inc/gpio.h:13:19: error: unknown type name 'GPIO_TypeDef'
+   13 | void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode);
+      |                   ^~~~~~~~~~~~
+../Src/gpio.c:5:19: error: unknown type name 'GPIO_TypeDef'
+    5 | void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode)
+      |                   ^~~~~~~~~~~~
+make: *** [Src/subdir.mk:34: Src/gpio.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/main.c:2:
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:146:3: error: #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+  146 |  #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+      |   ^~~~~
+In file included from ../Inc/rcc.h:11,
+                 from ../Src/rcc.c:2:
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:146:3: error: #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+  146 |  #error "Please select first the target STM32F7xx device used in your application (in stm32f7xx.h file)"
+      |   ^~~~~
+../Src/rcc.c: In function 'set_ahb1_periph_clock':
+../Src/rcc.c:6:10: error: 'RCC' undeclared (first use in this function)
+    6 |  SET_BIT(RCC->AHB1ENR,perihs);
+      |          ^~~
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:182:33: note: in definition of macro 'SET_BIT'
+  182 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+../Src/rcc.c:6:10: note: each undeclared identifier is reported only once for each function it appears in
+    6 |  SET_BIT(RCC->AHB1ENR,perihs);
+      |          ^~~
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:182:33: note: in definition of macro 'SET_BIT'
+  182 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+../Src/rcc.c: In function 'set_ahb2_periph_clock':
+../Src/rcc.c:11:10: error: 'RCC' undeclared (first use in this function)
+   11 |  SET_BIT(RCC->AHB2ENR,perihs);
+      |          ^~~
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:182:33: note: in definition of macro 'SET_BIT'
+  182 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+../Src/rcc.c: In function 'set_apb1_periph_clock':
+../Src/rcc.c:16:10: error: 'RCC' undeclared (first use in this function)
+   16 |  SET_BIT(RCC->APB1ENR,perihs);
+      |          ^~~
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:182:33: note: in definition of macro 'SET_BIT'
+  182 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+../Src/rcc.c: In function 'set_apb2_periph_clock':
+../Src/rcc.c:21:10: error: 'RCC' undeclared (first use in this function)
+   21 |  SET_BIT(RCC->APB2ENR,perihs);
+      |          ^~~
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/8_uart_modular_F7/chip_headers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:182:33: note: in definition of macro 'SET_BIT'
+  182 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+make: *** [Src/subdir.mk:36: Src/main.o] Error 1
+make: *** [Src/subdir.mk:38: Src/rcc.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+13:42:23 Build Failed. 13 errors, 0 warnings. (took 690ms)
+

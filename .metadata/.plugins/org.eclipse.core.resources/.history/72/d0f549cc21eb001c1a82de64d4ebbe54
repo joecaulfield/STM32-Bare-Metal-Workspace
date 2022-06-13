@@ -1,0 +1,21 @@
+#include "spi.h"
+
+#define GPIO_A_EN	(1U<<0)
+
+void spi1_config(void)
+{
+	/* Enable the Peripheral Clock of GPIOA */
+	RCC->AHB1EN	|= GPIO_A_EN;
+
+	/* Configure SPI SCK Pin PA5 */
+	// Alternate Function Mode = '10'
+	GPIOA->MODER &=~ (1U<<10);
+	GPIOA->MODER |= (1U<<11);
+
+	/* Select Alternate Function Mode as AF5 */
+	// AF5 = '0101' on Pins 20, 21, 22, 23
+	GPIOA->AFR[0] |= (1U<<20);
+	GPIOA->AFR[0] &=~ (1U<<21);
+	GPIOA->AFR[0] |= (1U<<22);
+	GPIOA->AFR[0] &=~ (1U<<23);
+}

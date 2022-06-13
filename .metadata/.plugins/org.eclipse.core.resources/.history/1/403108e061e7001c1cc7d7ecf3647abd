@@ -1,0 +1,13 @@
+#include "led.h"
+
+
+
+void user_leds_init(void)
+{
+
+}
+
+void all_leds_on(void)
+{
+
+}

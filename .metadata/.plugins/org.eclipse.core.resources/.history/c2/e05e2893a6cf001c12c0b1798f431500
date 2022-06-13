@@ -1,0 +1,17 @@
+/*
+ * No onboard user LED
+ * Let's try using header PA0
+ */
+
+// GPIO A IS CONTAINED WITHIN AHB1 BUS
+
+
+
+// Define Peripheral Addresses
+// Unsigned-Long.  Base address of Peripherals
+#define PERIPH_BASE 	0x4000 0000UL
+
+#define AHB1_OFFSET		0x0002 0000UL
+
+// GPIOA is connected to AHB1
+#define AHB1PERIPH_BASE	PERIPH_BASE + AHB1_OFFSET

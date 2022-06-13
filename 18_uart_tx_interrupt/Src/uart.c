@@ -1,0 +1,196 @@
+#include "uart.h"
+#include "stdint.h"
+#include "rcc.h"
+#include "gpio.h"
+
+#define GPIO_C_EN				(1U<<2)
+
+#define	UART6_TX				(1U<<6)
+#define	UART6_RX				(1U<<7)
+
+#define GPIO_ALTERNATE_MODE		0x2
+#define USART6_EN				(1U<<5)
+#define UART_DATAWIDTH_8B		0x00000000U
+#define UART_PARITY_NONE		0x00000000U
+#define UART_STOPBITS_1			0x00000000U
+#define CR1_TXEIE				(1U<<7)
+
+
+
+static void uart_parameters_config (USART_TypeDef *USARTx, uint32_t DataWidth, uint32_t Parity, uint32_t StopBits);
+static uint16_t compute_uart_div(uint32_t PeriphClock, uint32_t BaudRate);
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClock, uint32_t BaudRate);
+static void uart_enable(USART_TypeDef *USARTx);
+static void uart_write (USART_TypeDef *USARTx, uint8_t value);
+static void set_uart_transfer_direction(USART_TypeDef *USARTx, uint32_t TransferDirection);
+
+
+int __io_putchar(int ch)
+{
+	uart_write(USART6, ch);
+}
+
+
+void uart6_tx_init(void)
+{
+	/* 1. Enable clock access to GPIOC */
+	set_ahb1_periph_clock(GPIO_C_EN);
+
+	/* 2. Set [PC6] to alternate function */
+	set_pin_mode(GPIOC, UART6_TX, GPIO_ALTERNATE_MODE);
+
+	/* 3. Set alternate function type to USART */
+	GPIOC->AFR[0] &= ~(1U<<24);
+	GPIOC->AFR[0] &= ~(1U<<25);
+	GPIOC->AFR[0] &= ~(1U<<26);
+	GPIOC->AFR[0] |= (1U<<27);
+
+	/* 4. Enable clock access to the USART6 module */
+	set_apb2_periph_clock(USART6_EN);
+
+	/* 5. Configure USART parameters */
+	uart_parameters_config (USART6, UART_DATAWIDTH_8B, UART_PARITY_NONE, UART_STOPBITS_1);
+	set_uart_transfer_direction(USART6, USART_CR1_TE);
+
+	/* 6. Set Baud Rate */
+	uart_set_baudrate(USART6, 16000000, 115200);
+
+	/* 7. Enable USART */
+	uart_enable(USART6);
+}
+
+void uart6_tx_interrupt_init(void)
+{
+	/* 1. Enable clock access to GPIOC */
+	set_ahb1_periph_clock(GPIO_C_EN);
+
+	/* 2. Set [PC6] to alternate function */
+	set_pin_mode(GPIOC, UART6_TX, GPIO_ALTERNATE_MODE);
+
+	/* 3. Set alternate function type to USART */
+	GPIOC->AFR[0] &= ~(1U<<24);
+	GPIOC->AFR[0] &= ~(1U<<25);
+	GPIOC->AFR[0] &= ~(1U<<26);
+	GPIOC->AFR[0] |= (1U<<27);
+
+	/* 4. Enable clock access to the USART6 module */
+	set_apb2_periph_clock(USART6_EN);
+
+	/* 5. Configure USART parameters */
+	uart_parameters_config (USART6, UART_DATAWIDTH_8B, UART_PARITY_NONE, UART_STOPBITS_1);
+	set_uart_transfer_direction(USART6, USART_CR1_TE);
+
+	/* 6. Set Baud Rate */
+	uart_set_baudrate(USART6, 16000000, 115200);
+
+	/* 7. Enable USART */
+	uart_enable(USART6);
+
+	/* Enable USART TXE Interrupt */
+	USART6->CR1 |= CR1_TXEIE;
+
+	/* Enable USART Interrupt in NVIC */
+	NVIC_EnableIRQ(USART6_IRQn);
+
+}
+
+
+void uart6_rxtx_init(void)
+{
+
+	// ARD D0 = PC7 = RX
+	// ARD D1 = PC6 = TX
+
+	/* 1. Enable clock access to GPIOC */
+	set_ahb1_periph_clock(GPIO_C_EN);
+
+	// ******* CONFIGURE TX PIN ******* //
+
+	/* 2. Set [PC6] to alternate function */
+	set_pin_mode(GPIOC, UART6_TX, GPIO_ALTERNATE_MODE);
+
+	/* 3. Set alternate function type to USART */
+	GPIOC->AFR[0] &= ~(1U<<24);
+	GPIOC->AFR[0] &= ~(1U<<25);
+	GPIOC->AFR[0] &= ~(1U<<26);
+	GPIOC->AFR[0] |=  (1U<<27);
+
+	// ******* CONFIGURE RX PIN ******* //
+
+
+	/* Set [PC7] to alternate function */
+	set_pin_mode(GPIOC, UART6_RX, GPIO_ALTERNATE_MODE);
+
+	/* Set alternate function to USART */
+	GPIOC->AFR[0] &= ~(1U<<28);
+	GPIOC->AFR[0] &= ~(1U<<29);
+	GPIOC->AFR[0] &= ~(1U<<30);
+	GPIOC->AFR[0] |=  (1U<<31);
+
+	/* 4. Enable clock access to the USART6 module */
+	set_apb2_periph_clock(USART6_EN);
+
+	/* 5. Configure USART parameters */
+	uart_parameters_config (USART6, UART_DATAWIDTH_8B, UART_PARITY_NONE, UART_STOPBITS_1);
+	set_uart_transfer_direction(USART6, USART_CR1_TE | USART_CR1_RE);
+
+	/* 6. Set Baud Rate */
+	uart_set_baudrate(USART6, 16000000, 115200);
+
+	/* 7. Enable USART */
+	uart_enable(USART6);
+}
+
+
+uint8_t uart_read (USART_TypeDef *USARTx)
+{
+	while (!(USARTx->ISR & USART_ISR_RXNE)) {}
+
+	return (READ_BIT(USARTx->RDR, USART_RDR_RDR) & 0xFFU);
+}
+
+
+static void uart_write (USART_TypeDef *USARTx, uint8_t value)
+{
+	/* 1. Wait until transmit data register is empty */
+	while(!(USARTx->ISR & USART_ISR_TXE)) {}
+
+	/* 2. Write value into TX data register */
+	USARTx->TDR = value;
+}
+
+
+/* Sets UART Parameters */
+static void uart_parameters_config (	USART_TypeDef *USARTx,
+								uint32_t DataWidth,
+								uint32_t Parity,
+								uint32_t StopBits )
+{
+
+	MODIFY_REG(USARTx->CR1, USART_CR1_PS | USART_CR1_PCE | USART_CR1_M, Parity | DataWidth);
+	MODIFY_REG(USARTx->CR2, USART_CR2_STOP, StopBits);
+}
+
+/* Calculates proper frequency based on system clock */
+uint16_t compute_uart_div(uint32_t PeriphClock, uint32_t BaudRate)
+{
+	return (PeriphClock + (BaudRate / 2U) ) / BaudRate;
+}
+
+/* Sets UART Baud Rate */
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClock, uint32_t BaudRate)
+{
+	USARTx->BRR = compute_uart_div(PeriphClock, BaudRate);
+}
+
+/* Enable the UART Module */
+static void uart_enable(USART_TypeDef *USARTx)
+{
+	SET_BIT(USARTx->CR1, USART_CR1_UE);
+}
+
+/* Set UART Transfer Direction */
+static void set_uart_transfer_direction(USART_TypeDef *USARTx, uint32_t TransferDirection)
+{
+	MODIFY_REG(USARTx->CR1, USART_CR1_RE | USART_CR1_TE, TransferDirection);
+}

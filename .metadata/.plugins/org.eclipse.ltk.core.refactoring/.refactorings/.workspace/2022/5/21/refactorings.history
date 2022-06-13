@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;1_gpio_addr_config-struct&apos; to &apos;2_gpio_addr_config-struct&apos;" description="Rename resource &apos;1_gpio_addr_config-struct&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/1_gpio_addr_config-struct" name="2_gpio_addr_config-struct" stamp="1653062246012" updateReferences="true"/>
+</session>

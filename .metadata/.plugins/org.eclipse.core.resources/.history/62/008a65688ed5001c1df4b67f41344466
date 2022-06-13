@@ -1,0 +1,14 @@
+/*
+ * On-Board LED is off of PI1
+ */
+
+// Define Base Address of Peripherals (Block 2)
+#define PERIPH_BASE 		0x4000 0000UL
+
+// Define Base Address of AHB1 (Bus Containing Port I)
+#define AHB1_OFFSET			0x0002 0000UL
+#define AHB1PERIPH_BASE		PERIPH_BASE + AHB1_OFFSET
+
+// Define Base Address of GPIO I
+#define GPIOI_OFFSET 		0x0002 2000UL
+#define GPIOI_BASE			AHB1PERIPH_BASE + GPIOI_OFFSET

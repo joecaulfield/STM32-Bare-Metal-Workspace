@@ -1,0 +1,13 @@
+/*
+ * tim.h
+ *
+ *  Created on: Jun 12, 2022
+ *      Author: Joe
+ */
+
+#ifndef TIM_H_
+#define TIM_H_
+
+#include "stm32f7xx.h"
+
+#endif /* TIM_H_ */

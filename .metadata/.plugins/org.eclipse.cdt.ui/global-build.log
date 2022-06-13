@@ -1,0 +1,544 @@
+14:25:04 **** Incremental Build of configuration Debug for project 01_gpio_addr_config ****
+make -j4 all 
+arm-none-eabi-size   01_gpio_addr_config.elf 
+   text	   data	    bss	    dec	    hex	filename
+    780	      8	   1568	   2356	    934	01_gpio_addr_config.elf
+Finished building: default.size.stdout
+ 
+14:25:33 **** Clean-only build of configuration Debug for project 01_gpio_addr_config ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f746nghx.d ./Startup/startup_stm32f746nghx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 01_gpio_addr_config.elf 01_gpio_addr_config.list 01_gpio_addr_config.map default.size.stdout
+ 
+14:25:33 **** Clean-only build of configuration Debug for project 02_gpio_addr_config-struct ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f746nghx.d ./Startup/startup_stm32f746nghx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 02_gpio_addr_config-struct.elf 02_gpio_addr_config-struct.list 02_gpio_addr_config-struct.map default.size.stdout
+ 
+14:25:34 **** Clean-only build of configuration Debug for project 03_gpio_output ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f746nghx.d ./Startup/startup_stm32f746nghx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 03_gpio_output.elf 03_gpio_output.list 03_gpio_output.map default.size.stdout
+ 
+14:25:34 **** Build of configuration Debug for project 01_gpio_addr_config ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "01_gpio_addr_config.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\01_gpio_addr_config\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01_gpio_addr_config.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01_gpio_addr_config.elf
+ 
+arm-none-eabi-size   01_gpio_addr_config.elf 
+arm-none-eabi-objdump -h -S  01_gpio_addr_config.elf  > "01_gpio_addr_config.list"
+   text	   data	    bss	    dec	    hex	filename
+    780	      8	   1568	   2356	    934	01_gpio_addr_config.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01_gpio_addr_config.list
+ 
+14:25:36 **** Build of configuration Debug for project 02_gpio_addr_config-struct ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "02_gpio_addr_config-struct.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\02_gpio_addr_config-struct\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02_gpio_addr_config-struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02_gpio_addr_config-struct.elf
+ 
+arm-none-eabi-size   02_gpio_addr_config-struct.elf 
+arm-none-eabi-objdump -h -S  02_gpio_addr_config-struct.elf  > "02_gpio_addr_config-struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    776	      8	   1568	   2352	    930	02_gpio_addr_config-struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02_gpio_addr_config-struct.list
+ 
+14:25:37 **** Build of configuration Debug for project 03_gpio_output ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "03_gpio_output.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\03_gpio_output\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="03_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 03_gpio_output.elf
+ 
+arm-none-eabi-size   03_gpio_output.elf 
+arm-none-eabi-objdump -h -S  03_gpio_output.elf  > "03_gpio_output.list"
+   text	   data	    bss	    dec	    hex	filename
+    776	      8	   1568	   2352	    930	03_gpio_output.elf
+Finished building: default.size.stdout
+ 
+Finished building: 03_gpio_output.list
+ 
+14:25:39 **** Build of configuration Debug for project 04_gpio_output_bsrr ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "04_gpio_output_bsrr.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\04_gpio_output_bsrr\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_gpio_output_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04_gpio_output_bsrr.elf
+ 
+arm-none-eabi-size   04_gpio_output_bsrr.elf 
+arm-none-eabi-objdump -h -S  04_gpio_output_bsrr.elf  > "04_gpio_output_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    804	      8	   1568	   2380	    94c	04_gpio_output_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04_gpio_output_bsrr.list
+ 
+14:25:40 **** Build of configuration Debug for project 05_gpio_input ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "05_gpio_input.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\05_gpio_input\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 05_gpio_input.elf
+ 
+arm-none-eabi-size   05_gpio_input.elf 
+arm-none-eabi-objdump -h -S  05_gpio_input.elf  > "05_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    792	      8	   1568	   2368	    940	05_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 05_gpio_input.list
+ 
+14:25:42 **** Build of configuration Debug for project 06a_uart_tx ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "06a_uart_tx.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\06a_uart_tx\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="06a_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 06a_uart_tx.elf
+ 
+arm-none-eabi-size   06a_uart_tx.elf 
+arm-none-eabi-objdump -h -S  06a_uart_tx.elf  > "06a_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1308	      8	   1568	   2884	    b44	06a_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 06a_uart_tx.list
+ 
+14:25:44 **** Build of configuration Debug for project 06b_uart_tx2_USART6 ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "06b_uart_tx2_USART6.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\06b_uart_tx2_USART6\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="06b_uart_tx2_USART6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 06b_uart_tx2_USART6.elf
+ 
+arm-none-eabi-size   06b_uart_tx2_USART6.elf 
+arm-none-eabi-objdump -h -S  06b_uart_tx2_USART6.elf  > "06b_uart_tx2_USART6.list"
+   text	   data	    bss	    dec	    hex	filename
+   1304	      8	   1568	   2880	    b40	06b_uart_tx2_USART6.elf
+Finished building: default.size.stdout
+ 
+Finished building: 06b_uart_tx2_USART6.list
+ 
+14:25:47 **** Build of configuration Debug for project 07_uart_printf ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:38:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   38 |   printf("Hello there world!\n\r");
+      |   ^~~~~~
+../Src/main.c:38:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:6:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    5 | #include "stm32f7xx.h"
+  +++ |+#include <stdio.h>
+    6 | 
+../Src/main.c: In function '__io_putchar':
+../Src/main.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+   29 | }
+      | ^
+arm-none-eabi-gcc -o "07_uart_printf.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\07_uart_printf\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 07_uart_printf.elf
+ 
+arm-none-eabi-size   07_uart_printf.elf 
+arm-none-eabi-objdump -h -S  07_uart_printf.elf  > "07_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   5900	    108	   1588	   7596	   1dac	07_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 07_uart_printf.list
+ 
+14:25:50 **** Build of configuration Debug for project 08_uart_modular ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+arm-none-eabi-gcc -o "08_uart_modular.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\08_uart_modular\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08_uart_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08_uart_modular.elf
+ 
+arm-none-eabi-size   08_uart_modular.elf 
+arm-none-eabi-objdump -h -S  08_uart_modular.elf  > "08_uart_modular.list"
+   text	   data	    bss	    dec	    hex	filename
+   5896	    108	   1588	   7592	   1da8	08_uart_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08_uart_modular.list
+ 
+14:25:53 **** Build of configuration Debug for project 09_uart_rx ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "09_uart_rx.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\09_uart_rx\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09_uart_rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 09_uart_rx.elf
+ 
+arm-none-eabi-size   09_uart_rx.elf 
+arm-none-eabi-objdump -h -S  09_uart_rx.elf  > "09_uart_rx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1484	      8	   1568	   3060	    bf4	09_uart_rx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 09_uart_rx.list
+ 
+14:25:56 **** Build of configuration Debug for project 10_ADC_Continuous_Conversion ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "10_ADC_Continuous_Conversion.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\10_ADC_Continuous_Conversion\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_ADC_Continuous_Conversion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_ADC_Continuous_Conversion.elf
+ 
+arm-none-eabi-size   10_ADC_Continuous_Conversion.elf 
+arm-none-eabi-objdump -h -S  10_ADC_Continuous_Conversion.elf  > "10_ADC_Continuous_Conversion.list"
+   text	   data	    bss	    dec	    hex	filename
+    916	      8	   1568	   2492	    9bc	10_ADC_Continuous_Conversion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10_ADC_Continuous_Conversion.list
+ 
+14:25:59 **** Build of configuration Debug for project 11_ADC_Single_Conversion ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "11_ADC_Single_Conversion.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\11_ADC_Single_Conversion\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_ADC_Single_Conversion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 11_ADC_Single_Conversion.elf
+ 
+arm-none-eabi-size   11_ADC_Single_Conversion.elf 
+arm-none-eabi-objdump -h -S  11_ADC_Single_Conversion.elf  > "11_ADC_Single_Conversion.list"
+   text	   data	    bss	    dec	    hex	filename
+    916	      8	   1568	   2492	    9bc	11_ADC_Single_Conversion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 11_ADC_Single_Conversion.list
+ 
+14:26:01 **** Build of configuration Debug for project 12_SysTick ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "12_SysTick.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\12_SysTick\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="12_SysTick.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 12_SysTick.elf
+ 
+arm-none-eabi-size   12_SysTick.elf 
+arm-none-eabi-objdump -h -S  12_SysTick.elf  > "12_SysTick.list"
+   text	   data	    bss	    dec	    hex	filename
+   5588	    108	   1588	   7284	   1c74	12_SysTick.elf
+Finished building: default.size.stdout
+ 
+Finished building: 12_SysTick.list
+ 
+14:26:04 **** Build of configuration Debug for project 13_Timers ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "13_Timers.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\13_Timers\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 13_Timers.elf
+ 
+arm-none-eabi-size   13_Timers.elf 
+arm-none-eabi-objdump -h -S  13_Timers.elf  > "13_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+   5968	    108	   1588	   7664	   1df0	13_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 13_Timers.list
+ 
+14:26:07 **** Build of configuration Debug for project 14_InputInterrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/exti.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/exti.d" -MT"Src/exti.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/exti.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "14_InputInterrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\14_InputInterrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="14_InputInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 14_InputInterrupt.elf
+ 
+arm-none-eabi-size   14_InputInterrupt.elf 
+arm-none-eabi-objdump -h -S  14_InputInterrupt.elf  > "14_InputInterrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1072	      8	   1568	   2648	    a58	14_InputInterrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 14_InputInterrupt.list
+ 
+14:26:11 **** Build of configuration Debug for project 15_TimerInterrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/exti.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/exti.d" -MT"Src/exti.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/exti.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "15_TimerInterrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\15_TimerInterrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_TimerInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 15_TimerInterrupt.elf
+ 
+arm-none-eabi-size   15_TimerInterrupt.elf 
+arm-none-eabi-objdump -h -S  15_TimerInterrupt.elf  > "15_TimerInterrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+    992	      8	   1568	   2568	    a08	15_TimerInterrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 15_TimerInterrupt.list
+ 
+14:26:14 **** Build of configuration Debug for project 16_SysTick_Interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "16_SysTick_Interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\16_SysTick_Interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="16_SysTick_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 16_SysTick_Interrupt.elf
+ 
+arm-none-eabi-size   16_SysTick_Interrupt.elf 
+arm-none-eabi-objdump -h -S  16_SysTick_Interrupt.elf  > "16_SysTick_Interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1028	      8	   1568	   2604	    a2c	16_SysTick_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 16_SysTick_Interrupt.list
+ 
+14:26:17 **** Build of configuration Debug for project 17_ADC_Interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "17_ADC_Interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\17_ADC_Interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_ADC_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 17_ADC_Interrupt.elf
+ 
+arm-none-eabi-size   17_ADC_Interrupt.elf 
+arm-none-eabi-objdump -h -S  17_ADC_Interrupt.elf  > "17_ADC_Interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1140	      8	   1568	   2716	    a9c	17_ADC_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 17_ADC_Interrupt.list
+ 
+14:26:19 **** Build of configuration Debug for project 18_uart_tx_interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "18_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\18_uart_tx_interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="18_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 18_uart_tx_interrupt.elf
+ 
+arm-none-eabi-size   18_uart_tx_interrupt.elf 
+arm-none-eabi-objdump -h -S  18_uart_tx_interrupt.elf  > "18_uart_tx_interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1404	      8	   1568	   2980	    ba4	18_uart_tx_interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 18_uart_tx_interrupt.list
+ 
+14:26:22 **** Build of configuration Debug for project 19_uart_rx_interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "19_uart_rx_interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\19_uart_rx_interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="19_uart_rx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 19_uart_rx_interrupt.elf
+ 
+arm-none-eabi-size   19_uart_rx_interrupt.elf 
+arm-none-eabi-objdump -h -S  19_uart_rx_interrupt.elf  > "19_uart_rx_interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1560	      8	   1568	   3136	    c40	19_uart_rx_interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 19_uart_rx_interrupt.list
+ 
+14:26:24 **** Build of configuration Debug for project 20_SPI_RxTx_Interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "20_SPI_RxTx_Interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\20_SPI_RxTx_Interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_SPI_RxTx_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20_SPI_RxTx_Interrupt.elf
+ 
+arm-none-eabi-size   20_SPI_RxTx_Interrupt.elf 
+arm-none-eabi-objdump -h -S  20_SPI_RxTx_Interrupt.elf  > "20_SPI_RxTx_Interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1972	     24	   1584	   3580	    dfc	20_SPI_RxTx_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20_SPI_RxTx_Interrupt.list
+ 
+14:26:27 **** Build of configuration Debug for project 21_I2C_RxTx_Interrupt ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/rcc.d" -MT"Src/rcc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/rcc.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "21_I2C_RxTx_Interrupt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\21_I2C_RxTx_Interrupt\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="21_I2C_RxTx_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 21_I2C_RxTx_Interrupt.elf
+ 
+arm-none-eabi-size   21_I2C_RxTx_Interrupt.elf 
+arm-none-eabi-objdump -h -S  21_I2C_RxTx_Interrupt.elf  > "21_I2C_RxTx_Interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   7000	    116	   1596	   8712	   2208	21_I2C_RxTx_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: 21_I2C_RxTx_Interrupt.list
+ 

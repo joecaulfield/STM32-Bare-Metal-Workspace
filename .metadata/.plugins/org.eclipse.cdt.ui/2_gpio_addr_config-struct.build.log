@@ -1,0 +1,10 @@
+12:16:42 **** Incremental Build of configuration Debug for project 2_gpio_addr_config-struct ****
+make -j4 all 
+arm-none-eabi-size   2_gpio_addr_config-struct.elf 
+   text	   data	    bss	    dec	    hex	filename
+    776	      8	   1568	   2352	    930	2_gpio_addr_config-struct.elf
+Finished building: default.size.stdout
+ 
+
+12:16:42 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

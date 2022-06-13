@@ -1,0 +1,76 @@
+/* REFACTOR OF PROJECT 6 FOR USART6, AND USING UART TO USB CONVERTER!
+ * Port C - PC6 / PC7 / PC8 [AF8]
+ */
+
+#include "stm32f7xx.h"
+
+
+
+void set_ahb1_periph_clock(uint32_t periphs);
+void set_pin_mode(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Mode);
+void set_apb2_periph_clock(uint32_t periphs);
+
+
+
+int main (void)
+{
+	int x;
+	uart6_tx_init();
+
+	while (1)
+	{
+		printf("Hello there world!\n\r");
+
+		for (int i = 0; i < 9000; i++)
+		{
+			x++;
+		}
+	}
+}
+
+
+
+
+
+/* Enable clock access to AHB1 */
+void set_ahb1_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->AHB1ENR, periphs);
+}
+
+/* Enable clock access to AHB2 */
+void set_ahb2_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->AHB2ENR, periphs);
+}
+
+/* Enable clock access to APB1 */
+void set_apb1_periph_clock(uint32_t periphs)
+{
+	SET_BIT(RCC->APB1ENR, periphs);
+}
+
+/* Enable clock access to APB2 */
+void set_apb2_periph_clock(uint32_t periphs)
+	{
+		SET_BIT(RCC->APB2ENR, periphs);
+	}
+
+/* Set Port Mode */
+void set_pin_mode(	GPIO_TypeDef *GPIOx,
+					uint32_t Pin,
+					uint32_t Mode)
+{
+	// Clear the relevant bits & set new bits
+
+	MODIFY_REG(	GPIOx->MODER,
+				(0x3 << POSITION_VAL(Pin) * 2U),
+				(Mode << POSITION_VAL(Pin) * 2U)
+			  );
+}
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+/*
+ * exti.h
+ *
+ *  Created on: Jun 12, 2022
+ *      Author: Joe
+ */
+
+#ifndef EXTI_H_
+#define EXTI_H_
+
+void pc13_exti_init(void);
+
+#endif /* EXTI_H_ */

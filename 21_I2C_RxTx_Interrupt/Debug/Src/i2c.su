@@ -1,0 +1,5 @@
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	16	static
+../Src/i2c.c:14:6:i2c2_slave_config	8	static
+../Src/i2c.c:90:6:i2c1_master_config	4	static
+../Src/i2c.c:139:13:i2c2_setOwnAddress1	16	static
+../Src/i2c.c:144:10:i2c2_get_address_matchcode	4	static

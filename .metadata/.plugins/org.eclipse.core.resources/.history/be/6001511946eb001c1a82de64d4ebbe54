@@ -1,0 +1,5 @@
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	16	static
+../Src/spi.c:12:6:spi1_config	8	static
+../Src/spi.c:103:6:spi3_config	8	static
+../Src/spi.c:188:6:spi1_activate	4	static
+../Src/spi.c:194:6:spi3_activate	4	static

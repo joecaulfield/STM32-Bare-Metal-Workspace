@@ -1,0 +1,15 @@
+/*
+ * i2c.h
+ *
+ *  Created on: Jun 13, 2022
+ *      Author: Joe
+ */
+
+#ifndef I2C_H_
+#define I2C_H_
+
+#include "stm32f7xx.h"
+
+#define SLAVE_OWN_ADDRESS	0x5A
+
+#endif /* I2C_H_ */

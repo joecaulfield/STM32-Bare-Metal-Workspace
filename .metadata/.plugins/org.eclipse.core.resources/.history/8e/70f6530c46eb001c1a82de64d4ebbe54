@@ -1,0 +1,4 @@
+C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include/core_cm7.h:1896:22:__NVIC_EnableIRQ	16	static
+../Src/adc.c:21:6:pf9_adc3_init	4	static
+../Src/adc.c:66:10:adc_get_data	4	static
+../Src/adc.c:76:6:pf9_adc3_interrupt_init	8	static

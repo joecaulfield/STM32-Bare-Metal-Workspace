@@ -1,0 +1,33 @@
+14:25:47 **** Build of configuration Debug for project 07_uart_printf ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:38:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   38 |   printf("Hello there world!\n\r");
+      |   ^~~~~~
+../Src/main.c:38:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:6:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    5 | #include "stm32f7xx.h"
+  +++ |+#include <stdio.h>
+    6 | 
+../Src/main.c: In function '__io_putchar':
+../Src/main.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+   29 | }
+      | ^
+arm-none-eabi-gcc -o "07_uart_printf.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\07_uart_printf\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 07_uart_printf.elf
+ 
+arm-none-eabi-size   07_uart_printf.elf 
+arm-none-eabi-objdump -h -S  07_uart_printf.elf  > "07_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   5900	    108	   1588	   7596	   1dac	07_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 07_uart_printf.list
+ 
+
+14:25:50 Build Finished. 0 errors, 3 warnings. (took 2s.162ms)
+

@@ -1,0 +1,20 @@
+14:25:40 **** Build of configuration Debug for project 05_gpio_input ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f746nghx.d" -MT"Startup/startup_stm32f746nghx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f746nghx.o" "../Startup/startup_stm32f746nghx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "05_gpio_input.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\05_gpio_input\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 05_gpio_input.elf
+ 
+arm-none-eabi-size   05_gpio_input.elf 
+arm-none-eabi-objdump -h -S  05_gpio_input.elf  > "05_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    792	      8	   1568	   2368	    940	05_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 05_gpio_input.list
+ 
+
+14:25:42 Build Finished. 0 errors, 0 warnings. (took 1s.682ms)
+

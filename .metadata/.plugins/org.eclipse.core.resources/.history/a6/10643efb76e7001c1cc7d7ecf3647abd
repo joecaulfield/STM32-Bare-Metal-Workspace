@@ -1,0 +1,42 @@
+/*
+	ADC_IN0		ARD A0		PA0
+	ADC_IN8		ARD A1		PF10
+	ADC_IN7		ARD A2		PF9
+	ADC_IN6		ARD A3		PF8
+
+	PF9 is ADC3_IN7 accessed by ARD A2
+ */
+
+#include "adc.h"
+
+
+#define GPIO_F_EN	(1U<<5)
+
+void pf9_adc3_init(void) {
+	/***** Configure ADC GPIO Pin *****/
+
+	// Enable Clock Access to GPIO F
+		// GPIO F is connected to AHB1 Bus
+		// F is Pin 5 in the AHB1ENR
+	RCC->
+
+
+	// Set PF9 as analog mode
+
+	/***** Configure ADC Module *****/
+	// Enable Clock Access to ADC3
+	// Set Conversion-Mode to Continuous
+	// Set sequencer length
+	// Set ADC Channel
+
+	// Enable ADC Module
+
+	// Begin Conversion
+}
+
+uint32_t adc_get_data(void)
+{
+	// Wait for End-Of-Conversion flag
+
+	// Read & Return results
+}

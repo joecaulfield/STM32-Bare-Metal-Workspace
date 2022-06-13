@@ -1,0 +1,21 @@
+21:53:11 **** Incremental Build of configuration Debug for project 9_uart_rx ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F746NGHx -DSTM32F7 -DSTM32F746xx -c -I../Inc -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/Users/Joe/Documents/STM32 Bare-Metal Workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+   31 | }
+      | ^
+arm-none-eabi-gcc -o "9_uart_rx.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\Joe\Documents\STM32 Bare-Metal Workspace\9_uart_rx\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_uart_rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_uart_rx.elf
+ 
+arm-none-eabi-size   9_uart_rx.elf 
+arm-none-eabi-objdump -h -S  9_uart_rx.elf  > "9_uart_rx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1484	      8	   1568	   3060	    bf4	9_uart_rx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_uart_rx.list
+ 
+
+21:53:12 Build Finished. 0 errors, 1 warnings. (took 1s.694ms)
+

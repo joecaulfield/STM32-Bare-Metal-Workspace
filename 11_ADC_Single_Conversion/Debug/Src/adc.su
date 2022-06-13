@@ -1,0 +1,2 @@
+../Src/adc.c:21:6:pf9_adc3_init	4	static
+../Src/adc.c:66:10:adc_get_data	4	static

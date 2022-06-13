@@ -1,0 +1,31 @@
+/*
+ * On-Board LED is off of PI1
+ */
+
+// Define Base Address of Peripherals (Block 2)
+#define PERIPH_BASE 		0x4000 0000UL
+
+// Define Base Address of AHB1 (Bus Containing Port I)
+#define AHB1_OFFSET			0x0002 0000UL
+#define AHB1PERIPH_BASE		PERIPH_BASE + AHB1_OFFSET
+
+// Define Base Address of GPIO I
+#define GPIOI_OFFSET 		0x0002 2000UL
+#define GPIOI_BASE			AHB1PERIPH_BASE + GPIOI_OFFSET
+
+// Define Base Address of RCC (Enables Clock Access)
+#define RCC_OFFSET			0x380UL
+#define RCC_BASE			AHB1PERIPH_BASE + RCC_OFFSET
+
+// Define Base Address of RCC Peripheral Clock Register
+#define AHB1EN_R_OFFSET		0x30UL
+
+// Must typecast as a pointer, then dereference the pointer
+#define RCC_AHB1EN_R		(* (volatile unsigned int *) (RCC_BASE + AHB1EN_R_OFFSET))
+
+// Enable clock access to GPIO I
+#define GPIOI_CLK_EN		(1U<<8)
+
+//
+#define MODER_OFFSET		0x00UL
+#define GPIOI_MODE_R		(* (volatile unsigned int *)(GPIOI_BASE + MODER_OFFSET))

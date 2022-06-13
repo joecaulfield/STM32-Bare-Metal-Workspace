@@ -1,0 +1,8 @@
+1653585766307	Rename resource '6_uart_tx'
+1653585781052	Rename resource '6_uart_tx2_USART6'
+1653586211042	Rename resource '6b_uart_tx2_USART6'
+1653586218711	Rename resource '6a_uart_tx'
+1653586230266	Delete resource '7_uart_printf/6b_uart_tx2_USART6.launch'
+1653586291809	Delete resource '7_uart_printf'
+1653586311618	Delete resource '7_uart_printf/6_uart_tx2_USART6 (1).launch'
+1653587838679	Delete resource '8_uart_modular'
